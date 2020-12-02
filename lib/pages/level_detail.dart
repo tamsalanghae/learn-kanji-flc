@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/components/static_appbar.dart';
+import 'package:myapp/pages/challange.dart';
 import 'package:myapp/pages/word_choose.dart';
 
 import '../utils/screen_config.dart';
@@ -148,7 +149,7 @@ class _LevelDetailState extends State<LevelDetail> {
                 elevation: 5,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Challange())),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
