@@ -35,9 +35,7 @@ class _WordSelectState extends State<WordSelect> {
         body: Stack(
           alignment: Alignment.topLeft,
           children: [
-            Positioned(
-              child: _buildWidget(),
-            ),
+            Positioned(child: _buildWidget()),
             Container(
               color: Color(0xFF006265),
               height: SizeConfig.safeBlockVertical * 26,
@@ -67,11 +65,7 @@ class _WordSelectState extends State<WordSelect> {
                         height: 35,
                         decoration: BoxDecoration(shape: BoxShape.circle, image: DecorationImage(fit: BoxFit.fill, image: AssetImage("assets/en_flag.png"))),
                       ),
-                      Text(
-                        "EN",
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white),
-                        textAlign: TextAlign.center,
-                      )
+                      Text("EN", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white), textAlign: TextAlign.center)
                     ],
                   ),
                 )),
@@ -97,22 +91,18 @@ class _WordSelectState extends State<WordSelect> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                "${_data[index]["title"]}",
-                                style: TextStyle(color: Color(0xFF006265), fontWeight: FontWeight.w700, fontSize: 18),
-                              ),
+                              Text("${_data[index]["title"]}", style: TextStyle(color: Color(0xFF006265), fontWeight: FontWeight.w700, fontSize: 18)),
                               GestureDetector(
-                                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => LevelDetail())),
-                                child: Icon(
-                                  Icons.arrow_right_alt_sharp,
-                                  color: Color(0xFF006265),
-                                ),
+                                onTap: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LevelDetail(moduleTitle: "${_data[index]["title"]}"),
+                                    )),
+                                child: Icon(Icons.arrow_right_alt_sharp, color: Color(0xFF006265)),
                               )
                             ],
                           ),
-                          SizedBox(
-                            height: SizeConfig.safeBlockVertical * 2,
-                          ),
+                          SizedBox(height: SizeConfig.safeBlockVertical * 2),
                           GridView.builder(
                             itemCount: (_data.elementAt(index)["word"] as List).length,
                             physics: ScrollPhysics(),
@@ -127,9 +117,7 @@ class _WordSelectState extends State<WordSelect> {
                                   onPressed: () => Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => WordDetail(
-                                                word: "${(_data.elementAt(index)["word"] as List).elementAt(index2)}",
-                                              ))),
+                                          builder: (context) => WordDetail(word: "${(_data.elementAt(index)["word"] as List).elementAt(index2)}"))),
                                   shape: CircleBorder(),
                                   child: CircleAvatar(
                                     backgroundColor: Color(0xFFB3D1D1),
