@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/components/static_appbar.dart';
+import 'package:myapp/pages/word_detail.dart';
 import 'package:myapp/utils/screen_config.dart';
 
 class WordChoose extends StatefulWidget {
@@ -62,7 +63,10 @@ class _WordChooseState extends State<WordChoose> {
                 child: InkWell(
                     splashColor: Colors.blue.withAlpha(30),
                     onTap: () {
-                      print('Card tapped.');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WordDetail()));
                     },
                     child: _cardKanji(_cardKanjiList[index])));
           }),
@@ -85,13 +89,13 @@ class _WordChooseState extends State<WordChoose> {
           Row(children: [
             Expanded(child: SizedBox()),
             Container(
-                alignment: Alignment.topCenter,
-                width: SizeConfig.blockSizeHorizontal * 3,
-                height: SizeConfig.blockSizeHorizontal * 3,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(90),
-                    border: Border.all(color: Color(0xFF006465))),
-                ),
+              alignment: Alignment.topCenter,
+              width: SizeConfig.blockSizeHorizontal * 3,
+              height: SizeConfig.blockSizeHorizontal * 3,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(90),
+                  border: Border.all(color: Color(0xFF006465))),
+            ),
             SizedBox(width: SizeConfig.blockSizeHorizontal * 2)
           ]),
           Text(cardKanji.text,

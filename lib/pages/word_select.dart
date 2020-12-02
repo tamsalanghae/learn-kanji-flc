@@ -1,4 +1,4 @@
-import 'package:myapp/components/static_appbar.dart';
+ import 'package:myapp/components/static_appbar.dart';
 import 'package:flutter/material.dart';
 
 class WordSelect extends StatefulWidget {

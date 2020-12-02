@@ -1,9 +1,6 @@
 import 'package:myapp/components/static_appbar.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/screen_config.dart';
-import '../utils/screen_config.dart';
-import '../utils/screen_config.dart';
+import 'package:myapp/pages/word_choose.dart';
 import '../utils/screen_config.dart';
 
 class LevelDetail extends StatefulWidget {
@@ -39,7 +36,12 @@ class _LevelDetailState extends State<LevelDetail> {
                 ),
               ),
             ),
-            FlatButton(onPressed: (){}, child: Container(
+            FlatButton(onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => WordChoose()));
+            }, child: Container(
               child: Card(
                 color: Colors.white,
                 elevation: 5,
@@ -72,7 +74,12 @@ class _LevelDetailState extends State<LevelDetail> {
               width: SizeConfig.blockSizeHorizontal*95,
               margin: EdgeInsets.all(5),
             )),
-            FlatButton(onPressed: (){}, child: Container(
+            FlatButton(onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => WordChoose()));
+            }, child: Container(
               child: Card(
                 color: Colors.white,
                 elevation: 5,
@@ -106,7 +113,12 @@ class _LevelDetailState extends State<LevelDetail> {
               width: SizeConfig.blockSizeHorizontal*95,
               margin: EdgeInsets.all(5),
             )),
-            FlatButton(onPressed: (){}, child: Container(
+            FlatButton(onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => WordChoose()));
+            }, child: Container(
               child: Card(
                 color: Colors.white,
                 elevation: 5,
@@ -140,7 +152,12 @@ class _LevelDetailState extends State<LevelDetail> {
               width: SizeConfig.blockSizeHorizontal*95,
               margin: EdgeInsets.all(5),
             )),
-            FlatButton(onPressed: (){}, child: Container(
+            FlatButton(onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => WordChoose()));
+            }, child: Container(
               child: Card(
                 color: Colors.white,
                 elevation: 5,
