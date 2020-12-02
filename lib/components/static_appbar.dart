@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 AppBar staticAppbar({String title, PreferredSize bottomWidget, List<Widget> action}) => AppBar(
       leading: BackButtonWidget(),
       automaticallyImplyLeading: false,
-      backgroundColor: Color(0xFF006265),
+      backgroundColor: Color(0xFF006465),
       elevation: 0,
       title: FittedBox(
         child: Text(
