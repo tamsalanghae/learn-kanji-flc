@@ -50,7 +50,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-  - assets/
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -70,7 +70,9 @@ flutter:
     - family: BeVietnam
       fonts:
         - asset: fonts/BeVietnam-Light.ttf
+          weight: 200
         - asset: fonts/BeVietnam-Regular.ttf
+          weight: 400
         - asset: fonts/BeVietnam-Italic.ttf
           style: italic
 

@@ -1,9 +1,6 @@
 import 'package:myapp/pages/word_select.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:myapp/pages/word_choose.dart';
-
-import '../pages/level_detail.dart';
 
 class LevelCard extends StatelessWidget {
   final String level;
@@ -19,7 +16,7 @@ class LevelCard extends StatelessWidget {
         color: Color(0xff5ca4a7),
         elevation: 5.0,
         child: InkWell(
-          onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => LevelDetail()))},
+          onTap: () => {Navigator.push(context, MaterialPageRoute(builder: (context) => WordSelect(title: level,)))},
           child: Container(
             width: 300,
             height: 50,
