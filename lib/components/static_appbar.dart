@@ -24,6 +24,7 @@ class BackButtonWidget extends StatelessWidget {
     return IconButton(
       icon: ImageIcon(AssetImage("assets/arrow_left.png")),
       onPressed: () => Navigator.of(context).pop(),
+      color: Colors.white,
     );
   }
 }
